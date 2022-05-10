@@ -1,9 +1,9 @@
 # law-b7-auth
 
-```api/token/``` : Login user
+```api/token/``` : Login user (params: email, password)
 
-```api/token/refresh/```: Refresh token
+```api/token/refresh/```: Refresh token (params: refresh)
 
-```api/user/register/```: Register user baru
+```api/user/register/```: Register user baru (params: email, user_name, password)
 
-```api/user/logout/blacklist/```: Logout user (blacklist token)
+```api/user/logout/blacklist/```: Logout user (params: refresh_token)
