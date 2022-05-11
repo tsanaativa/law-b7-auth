@@ -1,0 +1,1 @@
+web: gunicorn lawb7auth.wsgi
