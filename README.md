@@ -1,6 +1,7 @@
 # Authentication Service TK LAW B7
 
 Link service: https://law-b7-auth.herokuapp.com/
+
 API Docs: https://app.apiary.io/authservicetklawb7api/
 
 ```api/user/``` (GET): Verify token + get user info (token di header)
