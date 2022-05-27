@@ -1,5 +1,7 @@
 # law-b7-auth
 
+API Docs: https://app.apiary.io/authservicetklawb7api/
+
 ```api/user/``` (GET): Verify token + get user info (token di header)
 
 ```api/token/``` (POST): Login user (params: email, password)
