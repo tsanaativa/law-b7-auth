@@ -18,7 +18,7 @@ def create_cart(token, user_id, username, email):
     payload = {
         "user": {
             "user_id": user_id,
-            "user_name": username,
+            "username": username,
             "email": email
         }
         
@@ -40,11 +40,11 @@ class CustomUserCreate(APIView):
         if reg_serializer.is_valid():
             newuser = reg_serializer.save()
             if newuser:
-                token = str(RefreshToken.for_user(newuser).access_token)
-                create_cart(token, newuser.id, newuser.user_name, newuser.email)
                 json = reg_serializer.data
                 response = JsonResponse(json, status=status.HTTP_201_CREATED)
                 send_logs('user/register/', 'POST', response)
+                token = str(RefreshToken.for_user(newuser).access_token)
+                create_cart(token, newuser.id, newuser.user_name, newuser.email)
                 return response
         response = JsonResponse(reg_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
         send_logs('user/register/', 'POST', response)
