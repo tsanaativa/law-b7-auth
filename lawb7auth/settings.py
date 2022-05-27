@@ -28,7 +28,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS=['https://law-b7-auth.herokuapp.com/', 'http://35.239.224.38/'
+ALLOWED_HOSTS=['https://law-b7-auth.herokuapp.com/',
 'localhost',
 '127.0.0.1']
 
